@@ -291,7 +291,7 @@ const Login: React.FC = () => {
             </div>
 
             {/* Step Progress */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2">
               <StepIndicator
                 step={1}
                 label="เข้าสู่ระบบ"
