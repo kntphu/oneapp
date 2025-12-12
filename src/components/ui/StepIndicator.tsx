@@ -12,6 +12,7 @@ export interface StepIndicatorProps {
   label: string;
   active: boolean;
   completed: boolean;
+  position?: 'left' | 'right';
   className?: string;
 }
 
@@ -24,10 +25,11 @@ const StepIndicator: React.FC<StepIndicatorProps> = ({
   label,
   active,
   completed,
+  position = 'right',
   className = '',
 }) => {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-2 ${position === 'left' ? 'flex-row-reverse' : ''} ${className}`}>
       <div
         className={`
           flex h-8 w-8 items-center justify-center rounded-full text-xs font-bold

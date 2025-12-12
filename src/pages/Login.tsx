@@ -284,7 +284,7 @@ const Login: React.FC = () => {
 
             {/* Security Badge */}
             <div className="flex items-center justify-center gap-2 rounded-full bg-gray-100 px-4 py-2">
-              <FaShieldAlt className="h-4 w-4 text-primary" />
+              <FaShieldAlt className="h-4 w-4 text-success" />
               <span className="text-xs font-medium text-gray-700">
                 การเชื่อมต่อปลอดภัย SSL
               </span>
@@ -297,6 +297,7 @@ const Login: React.FC = () => {
                 label="เข้าสู่ระบบ"
                 active={!isOtpStep}
                 completed={isOtpStep}
+                position="left"
               />
               <div className="flex-1 h-1 rounded-full bg-gray-200 overflow-hidden">
                 <div
@@ -309,6 +310,7 @@ const Login: React.FC = () => {
                 label="ยืนยัน OTP"
                 active={isOtpStep}
                 completed={false}
+                position="right"
               />
             </div>
           </div>
