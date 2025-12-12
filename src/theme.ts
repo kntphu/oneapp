@@ -11,9 +11,9 @@ import { createTheme, type ThemeOptions } from '@mui/material/styles';
  */
 const palette = {
   primary: {
-    main: '#FF6B35',
-    light: '#FF8C35',
-    dark: '#E55A2B',
+    main: '#6b4de6',
+    light: '#8b6ef0',
+    dark: '#5a3dd4',
     contrastText: '#FFFFFF',
   },
   secondary: {
@@ -58,7 +58,7 @@ const palette = {
  * กำหนดรูปแบบตัวอักษร (Font) และขนาดต่างๆ
  */
 const typography = {
-  fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Sarabun", "Roboto", "Helvetica", "Arial", sans-serif',
   fontSize: 14,
   fontWeightLight: 300,
   fontWeightRegular: 400,
@@ -105,7 +105,7 @@ const components: ThemeOptions['components'] = {
         transition: 'all 0.2s ease-in-out',
         boxShadow: 'none',
         '&:hover': {
-          boxShadow: '0 4px 12px rgba(255, 107, 53, 0.25)',
+          boxShadow: '0 4px 12px rgba(107, 77, 230, 0.25)',
           transform: 'translateY(-1px)',
         },
         '&:active': { transform: 'translateY(0)' },
@@ -113,8 +113,8 @@ const components: ThemeOptions['components'] = {
       },
       contained: {
         '&.MuiButton-containedPrimary': {
-          background: 'linear-gradient(135deg, #FF6B35 0%, #FF8C35 100%)',
-          '&:hover': { background: 'linear-gradient(135deg, #E55A2B 0%, #FF6B35 100%)' },
+          background: 'linear-gradient(135deg, #6b4de6 0%, #8b6ef0 100%)',
+          '&:hover': { background: 'linear-gradient(135deg, #5a3dd4 0%, #6b4de6 100%)' },
         },
       },
       outlined: {
@@ -133,12 +133,12 @@ const components: ThemeOptions['components'] = {
           backgroundColor: '#FFFFFF',
           transition: 'all 0.2s ease-in-out',
           '& fieldset': { borderColor: '#E8EAED', borderWidth: 1, transition: 'all 0.2s ease-in-out' },
-          '&:hover fieldset': { borderColor: '#FF6B35', borderWidth: 2 },
-          '&.Mui-focused fieldset': { borderColor: '#FF6B35', borderWidth: 2 },
+          '&:hover fieldset': { borderColor: '#6b4de6', borderWidth: 2 },
+          '&.Mui-focused fieldset': { borderColor: '#6b4de6', borderWidth: 2 },
           '&.Mui-error fieldset': { borderColor: '#DC2626' },
         },
         '& .MuiInputLabel-root': {
-          '&.Mui-focused': { color: '#FF6B35' },
+          '&.Mui-focused': { color: '#6b4de6' },
         },
       },
     },

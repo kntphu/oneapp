@@ -10,16 +10,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#FF6B35',
-          light: '#FF8C35',
-          dark: '#E55A2B',
+          DEFAULT: '#6b4de6',
+          light: '#8b6ef0',
+          dark: '#5a3dd4',
         },
         secondary: {
           DEFAULT: '#2C2C2C',
           light: '#6C6C6C',
           dark: '#1A1A1A',
         },
-        accent: '#FF8C35',
+        accent: '#f50057',
         success: '#10B981',
         warning: '#F59E0B',
         error: '#DC2626',
@@ -38,8 +38,8 @@ export default {
         }
       },
       fontFamily: {
-        sans: ['Poppins', 'sans-serif', 'Sora'],
-        body: ['Prompt', 'sans-serif'],
+        sans: ['Sarabun', 'sans-serif'],
+        body: ['Sarabun', 'sans-serif'],
       },
       borderRadius: {
         'sm': '8px',
@@ -50,8 +50,9 @@ export default {
       },
       boxShadow: {
         'card': '0 4px 12px rgba(0, 0, 0, 0.08)',
-        'button': '0 4px 12px rgba(255, 107, 53, 0.25)',
-        'top-bar': '0 2px 8px rgba(0, 0, 0, 0.06)', // เพิ่มเงาสำหรับ TopBar
+        'button': '0 4px 12px rgba(107, 77, 230, 0.25)',
+        'button-action': '0 4px 12px rgba(245, 0, 87, 0.25)',
+        'top-bar': '0 2px 8px rgba(0, 0, 0, 0.06)',
       },
       transitionTimingFunction: {
         'custom-ease': 'cubic-bezier(0.4, 0, 0.2, 1)',
