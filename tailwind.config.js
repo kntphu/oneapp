@@ -62,14 +62,29 @@ export default {
           'from': { opacity: '0', transform: 'translateY(-10px) scale(0.98)' },
           'to': { opacity: '1', transform: 'translateY(0) scale(1)' },
         },
+        fadeOut: {
+          'from': { opacity: '1', transform: 'translateY(0) scale(1)' },
+          'to': { opacity: '0', transform: 'translateY(-10px) scale(0.98)' },
+        },
+        slideIn: {
+          'from': { opacity: '0', transform: 'translateX(20px)' },
+          'to': { opacity: '1', transform: 'translateX(0)' },
+        },
         slideUp: {
-            'from': { opacity: '0', transform: 'translateY(20px)' },
-            'to': { opacity: '1', transform: 'translateY(0)' },
+          'from': { opacity: '0', transform: 'translateY(20px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInUp: {
+          'from': { opacity: '0', transform: 'translateY(10px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {
-        'fade-in': 'fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1)', // Animation ที่ใช้ในโค้ดตัวอย่าง
+        'fade-in': 'fadeIn 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+        'fade-out': 'fadeOut 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
+        'slide-in': 'slideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         'slide-up': 'slideUp 0.6s ease-out forwards',
+        'fade-in-up': 'fadeInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },

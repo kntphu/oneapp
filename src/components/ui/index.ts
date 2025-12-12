@@ -26,3 +26,9 @@ export type { SelectProps, SelectOption } from './Select';
 
 export { default as Textarea } from './Textarea';
 export type { TextareaProps } from './Textarea';
+
+export { default as InputOTP } from './InputOTP';
+export type { InputOTPProps } from './InputOTP';
+
+export { default as StepIndicator } from './StepIndicator';
+export type { StepIndicatorProps } from './StepIndicator';
