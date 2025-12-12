@@ -18,8 +18,8 @@ const environment = getEnvironment();
 // ===================================================================
 
 export const API_BASE_URL: string = environment === 'production'
-  ? 'http://localhost:5000/api/v2'
-  : 'https://api.onetabien.com/api/v2';
+  ? 'https://api.onetabien.com/api/v2'
+  : 'http://localhost:5000/api/v2';
 
 // ===================================================================
 //                        APPLICATION CONFIGURATION
