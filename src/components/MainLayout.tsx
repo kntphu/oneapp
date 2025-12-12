@@ -68,19 +68,33 @@ const MainLayout: React.FC = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <TopBar 
-        activeView={getActiveView()} 
-        onViewChange={handleViewChange} 
-      />
-      
-      <main className="animate-fade-in">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Outlet />
-        </div>
-      </main>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-50 relative">
+      {/* Background Pattern */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-30 z-0">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
+            backgroundSize: '40px 40px',
+          }}
+        />
+      </div>
 
-      <ScrollToTopButton isVisible={isScrolled} />
+      {/* Content */}
+      <div className="relative z-10">
+        <TopBar
+          activeView={getActiveView()}
+          onViewChange={handleViewChange}
+        />
+
+        <main className="animate-fade-in">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <Outlet />
+          </div>
+        </main>
+
+        <ScrollToTopButton isVisible={isScrolled} />
+      </div>
     </div>
   );
 };
