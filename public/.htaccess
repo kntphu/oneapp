@@ -1,0 +1,26 @@
+# ป้องกันการเข้าถึงไฟล์สำคัญ
+<FilesMatch "(\.env|package\.json|package-lock\.json|webpack\.config\.js|\.map)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# ปิดการแสดง directory listing
+Options -Indexes
+
+# การกำหนดค่า mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # ให้ทุก request ไปที่ index.html
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
+
+# ป้องกันการเข้าถึงไฟล์ .htaccess
+<Files ".htaccess">
+    Order Allow,Deny
+    Deny from all
+</Files>

@@ -1,0 +1,116 @@
+/* src/global.css */
+
+/* =================================================================== */
+/* FONT & LIBRARY IMPORTS                         */
+/* =================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap');
+@import 'react-toastify/dist/ReactToastify.css';
+
+
+/* =================================================================== */
+/* TAILWIND DIRECTIVES                         */
+/* =================================================================== */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* =================================================================== */
+/* BASE STYLES & RESETS                        */
+/* =================================================================== */
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-bold;
+  }
+
+  /* Custom Scrollbar Styles */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full hover:bg-gray-500 transition-colors;
+  }
+  
+  /* Selection Color */
+  ::selection {
+    @apply bg-primary/20 text-primary-dark;
+  }
+}
+
+
+/* =================================================================== */
+/* THIRD-PARTY LIBRARY OVERRIDES                     */
+/* =================================================================== */
+
+/* React Toastify Customization */
+.Toastify__toast-container {
+  @apply font-body z-[9999]; /* Ensure toast is on top */
+}
+
+.Toastify__toast {
+  @apply rounded-xl shadow-lg text-white;
+}
+
+.Toastify__toast-icon svg {
+  fill: white;
+}
+
+.Toastify__toast--success {
+  @apply bg-success;
+}
+.Toastify__toast--error {
+  @apply bg-error;
+}
+.Toastify__toast--warning {
+  @apply bg-warning text-white;
+}
+.Toastify__toast--info {
+  @apply bg-info;
+}
+
+.Toastify__progress-bar {
+  @apply bg-white/80;
+}
+
+/* Add custom styles for form inputs and buttons */
+@layer components {
+  .form-label {
+    @apply block text-sm font-medium text-gray-800 mb-1.5;
+  }
+  .form-input {
+    @apply w-full px-4 py-2.5 bg-white text-gray-900 placeholder-gray-400 border border-gray-300 rounded-lg transition-all duration-200 focus:ring-2 focus:ring-primary focus:border-transparent focus:outline-none;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+      @apply bg-gray-200 hover:bg-gray-300 text-gray-800 px-5 py-2.5 rounded-lg font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-secondary-outline {
+      @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 px-4 py-2 rounded-lg font-medium transition-colors disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+  .btn-success {
+    @apply bg-success hover:bg-green-700 text-white px-5 py-2.5 rounded-lg font-medium transition-colors shadow-sm hover:shadow-md disabled:opacity-60 disabled:cursor-not-allowed;
+  }
+}

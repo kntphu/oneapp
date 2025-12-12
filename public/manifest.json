@@ -1,0 +1,30 @@
+{
+  "short_name": "OnePlatform",
+  "name": "One Platform | ระบบบริหารจัดการข้อมูล",
+  "description": "ระบบบริหารจัดการข้อมูลลูกค้า การจองทะเบียนรถ คำนวณเลขทะเบียน และดูปฏิทินนัดหมาย",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "scope": "/", 
+  "display": "standalone",
+  "theme_color": "#FF6B35",
+  "background_color": "#FFFFFF"
+}
